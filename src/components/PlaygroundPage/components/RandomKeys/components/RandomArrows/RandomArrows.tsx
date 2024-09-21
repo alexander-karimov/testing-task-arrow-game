@@ -1,3 +1,5 @@
+import cn from "classnames"
+import stylesMain from "./../../RandomKeys.module.css"
 import styles from "./RandomArrows.module.css"
 
 import { useAppSelector } from "../../../../../../app/hooks"
@@ -9,17 +11,15 @@ const RandomArrows: React.FC = () => {
   const state = useAppSelector((state) => state.playground)
 
   const getStyleForKeys = (element: IPlaygroundStepsState): string => {
-    if (element.success && element.success !== null) {
-      return styles.iconSuccess
-    }
-    if (!element.success && element.success !== null) {
-      return styles.iconFailure
-    }
-    return styles.iconDefault
+    return cn(
+      element.success && element.success !== null && styles.iconSuccess,
+      !element.success && element.success !== null && styles.iconFailure,
+      stylesMain.icon,
+    )
   }
 
   return (
-    <div>
+    <div className={stylesMain.container}>
       {state.steps.map((element) => (
         <span key={element.step} className={getStyleForKeys(element)}>
           {MAP_ARROW_CODES[element.currentValue as keyof IMapArrowCodes]}

@@ -1,4 +1,9 @@
-// import styles from "./GreetingText.module.css"
+import stylesMain from "./../../RandomKeys.module.css"
+
+import TypographyText from "../../../../../UIKit/TypographyText/TypographyText"
+
+import Box from "@mui/material/Box"
+import CircularProgress from "@mui/material/CircularProgress"
 
 export interface IGreetingTextProps {
   isTimerActive: boolean
@@ -8,14 +13,20 @@ const GreetingText: React.FC<IGreetingTextProps> = (props) => {
   const { isTimerActive } = props
 
   if (isTimerActive) {
-    return <span>Loading...</span>
+    return (
+      <div className={stylesMain.container}>
+        <Box className={stylesMain.icon}>
+          <CircularProgress />
+        </Box>
+      </div>
+    )
   }
 
   return (
-    <span>
-      Нажмите "Начать", чтобы запустить тренировку,
-      <br /> после чего ожидайте первый символ
-    </span>
+    <TypographyText>
+      Нажмите <span className={stylesMain.bold}>"Начать"</span>, чтобы запустить
+      игру, после чего ожидайте первый символ
+    </TypographyText>
   )
 }
 

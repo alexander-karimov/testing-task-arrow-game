@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-huge);
+  max-width: 1000px;
+  margin: auto;
+  margin-top: var(--spacing-medium);
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  min-width: 475px;
+  max-width: 475px;
+  min-height: 320px;
+  padding: var(--spacing-large);
+  border: 1px solid var(--color-yellow-darker);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--color-gray-light);
+}

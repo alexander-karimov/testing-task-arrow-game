@@ -1,0 +1,16 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-large);
+}
+
+.scoreContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bold {
+  font-weight: 700;
+}

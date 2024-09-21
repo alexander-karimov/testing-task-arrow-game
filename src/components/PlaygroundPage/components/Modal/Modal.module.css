@@ -1,0 +1,25 @@
+.button {
+  display: block;
+  margin: 0 auto;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.container {
+  background-color: white;
+  width: 300px;
+  padding: var(--spacing-large);
+  outline: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.text {
+  margin-bottom: var(--spacing-huge);
+}

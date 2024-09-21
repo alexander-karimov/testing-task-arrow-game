@@ -3,6 +3,9 @@ import { MAP_ARROW_CODES } from "../../constants"
 import { useAppDispatch } from "../../../../app/hooks"
 import { setEnteredValue } from "../../store/slices"
 import { useKeyPressedElement } from "./hooks"
+import TypographyHeader from "../../../UIKit/TypographyHeader/TypographyHeader"
+import TypographyText from "../../../UIKit/TypographyText/TypographyText"
+import styles from "./KeyPressed.module.css"
 
 export interface IKeyPressedProps {
   isTimerActive: boolean
@@ -34,8 +37,15 @@ const KeyPressed: React.FC<IKeyPressedProps> = (props) => {
 
   return (
     <>
-      <h3>Была нажата клавиша:</h3>
-      <div>{pressedKey}</div>
+      <div className={styles.headerContainer}>
+        <TypographyHeader>Нажатый символ:</TypographyHeader>
+      </div>
+
+      <div className={styles.container}>
+        <div className={styles.iconContainer}>
+          <span className={styles.icon}>{pressedKey}</span>
+        </div>
+      </div>
     </>
   )
 }

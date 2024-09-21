@@ -7,6 +7,8 @@ import RandomKeys from "./components/RandomKeys/RandomKeys"
 import KeyPressed from "./components/KeyPressed/KeyPressed"
 import Score from "./components/Score/Score"
 import Modal from "./components/Modal/Modal"
+import Description from "./components/Description/Description"
+import styles from "./PlaygroundPage.module.css"
 
 const Playground: React.FC = () => {
   const [isShowModal, setIsShowModal] = useState<boolean>(false)
@@ -46,14 +48,21 @@ const Playground: React.FC = () => {
   }, [state.totalFailure, state.totalSuccessful])
 
   return (
-    <div>
-      <Controls
-        isTimerActive={isTimerActive}
-        setIsTimerActive={setIsTimerActive}
-      />
-      <RandomKeys isTimerActive={isTimerActive} />
-      <KeyPressed isTimerActive={isTimerActive} />
-      <Score />
+    <div className={styles.container}>
+      <div className={styles.box}>
+        <Description />
+        <Controls
+          isTimerActive={isTimerActive}
+          setIsTimerActive={setIsTimerActive}
+        />
+      </div>
+      <div className={styles.box}>
+        {" "}
+        <RandomKeys isTimerActive={isTimerActive} />
+        <KeyPressed isTimerActive={isTimerActive} />
+        <Score />
+      </div>
+
       {isShowModal && (
         <Modal
           setIsShowModal={setIsShowModal}

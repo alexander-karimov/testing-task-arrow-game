@@ -1,5 +1,10 @@
 import { useAppDispatch } from "../../../../app/hooks"
+import Button from "../../../UIKit/Button/Button"
+import TypographyText from "../../../UIKit/TypographyText/TypographyText"
 import { resetStore } from "../../store/slices"
+import { Modal as MUIModal } from "@mui/material"
+import styles from "./Modal.module.css"
+import TypographyHeader from "../../../UIKit/TypographyHeader/TypographyHeader"
 
 export interface IModalProps {
   //React.Dispatch<React.SetStateAction<boolean>> - это стандартное описание пропса для 2 значения из useState
@@ -17,22 +22,30 @@ const Modal: React.FC<IModalProps> = (props) => {
   }
 
   return (
-    <div>
-      {isSuccessEndGame ? (
-        <span>
-          Поздравляем!
-          <br />
-          Вы выиграли!
-        </span>
-      ) : (
-        <span>
-          О, нет...
-          <br />
-          Вы проиграли!
-        </span>
-      )}
-      <button onClick={handleClose}>Начать новую игру!</button>
-    </div>
+    <MUIModal open onClose={() => handleClose} className={styles.modal}>
+      <div className={styles.container}>
+        {isSuccessEndGame ? (
+          <div>
+            <TypographyHeader>Поздравляем!</TypographyHeader>
+            <TypographyText className={styles.text}>
+              <br />
+              Вы выиграли!
+            </TypographyText>
+          </div>
+        ) : (
+          <div>
+            <TypographyHeader>О, нет!</TypographyHeader>
+            <TypographyText className={styles.text}>
+              <br />
+              Вы проиграли!
+            </TypographyText>
+          </div>
+        )}
+        <Button onClick={handleClose} className={styles.button}>
+          Начать новую игру!
+        </Button>
+      </div>
+    </MUIModal>
   )
 }
 
