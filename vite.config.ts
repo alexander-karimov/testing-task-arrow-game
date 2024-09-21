@@ -14,4 +14,7 @@ export default defineConfig({
     setupFiles: "src/setupTests",
     mockReset: true,
   },
+  build: {
+    outDir: "build", // Обязательно! Нужно чтобы сработала библиотека gh-pages
+  },
 })
