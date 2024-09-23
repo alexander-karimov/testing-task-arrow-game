@@ -1,10 +1,10 @@
 import { useAppDispatch } from "../../../../app/hooks"
-import Button from "../../../UIKit/Button/Button"
-import TypographyText from "../../../UIKit/TypographyText/TypographyText"
 import { resetStore } from "../../store/slices"
 import { Modal as MUIModal } from "@mui/material"
-import styles from "./Modal.module.css"
+import TypographyText from "../../../UIKit/TypographyText/TypographyText"
+import Button from "../../../UIKit/Button/Button"
 import TypographyHeader from "../../../UIKit/TypographyHeader/TypographyHeader"
+import styles from "./Modal.module.css"
 
 export interface IModalProps {
   //React.Dispatch<React.SetStateAction<boolean>> - это стандартное описание пропса для 2 значения из useState

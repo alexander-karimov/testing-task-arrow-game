@@ -1,11 +1,11 @@
-import cn from "classnames"
-import stylesMain from "./../../RandomKeys.module.css"
-import styles from "./RandomArrows.module.css"
-
 import { useAppSelector } from "../../../../../../app/hooks"
 import { IPlaygroundStepsState } from "../../../../store/types"
 import { MAP_ARROW_CODES } from "../../../../constants"
 import { IMapArrowCodes } from "../../../../types"
+
+import cn from "classnames"
+import stylesMain from "./../../RandomKeys.module.css"
+import styles from "./RandomArrows.module.css"
 
 const RandomArrows: React.FC = () => {
   const state = useAppSelector((state) => state.playground)

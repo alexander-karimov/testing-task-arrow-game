@@ -4,7 +4,6 @@ import { useAppDispatch } from "../../../../app/hooks"
 import { setEnteredValue } from "../../store/slices"
 import { useKeyPressedElement } from "./hooks"
 import TypographyHeader from "../../../UIKit/TypographyHeader/TypographyHeader"
-import TypographyText from "../../../UIKit/TypographyText/TypographyText"
 import styles from "./KeyPressed.module.css"
 
 export interface IKeyPressedProps {

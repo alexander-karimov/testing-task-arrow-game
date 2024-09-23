@@ -1,9 +1,7 @@
-import stylesMain from "./../../RandomKeys.module.css"
-
 import TypographyText from "../../../../../UIKit/TypographyText/TypographyText"
-
 import Box from "@mui/material/Box"
 import CircularProgress from "@mui/material/CircularProgress"
+import stylesMain from "./../../RandomKeys.module.css"
 
 export interface IGreetingTextProps {
   isTimerActive: boolean

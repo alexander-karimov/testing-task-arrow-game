@@ -1,9 +1,9 @@
-import styles from "./Score.module.css"
-
 import { Chip, Stack } from "@mui/material"
 import { useAppSelector } from "../../../../app/hooks"
 import TypographyHeader from "../../../UIKit/TypographyHeader/TypographyHeader"
 import TypographyText from "../../../UIKit/TypographyText/TypographyText"
+
+import styles from "./Score.module.css"
 
 const Score: React.FC = () => {
   const state = useAppSelector((state) => state.playground)
