@@ -1,27 +1,26 @@
-# vite-template-redux
+# О проекте
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+Проект выполнен как тестовое задание для одной из game-dev компаний и представляет собой игру "5 подряд":
+- Ознакомиться с игрой: https://alexander-karimov.github.io/testing-task-arrow-game/;
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
-```
+## Stack проекта
 
-## Goals
+- React;
+- Typescript;
+- Redux Toolkit;
+- ESLint;
+- Prettier;
+- Material UI;
+- Vitest;
+- Vite;
+- Husky;
+- GitHub Pages;
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+## Установка:
 
-## Scripts
-
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
-
-## Inspiration
-
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+1. Создай рабочую директорию и клонируй в нее данный репозиторий;
+2. Установи зависимости (используй `npm install`);
+3. Запусти с помощью команды `npm run dev`;
+4. В проект установлена библиотека `gh-pages` для деплоя, используй команду `npm run deploy` - выполнится `build`, после чего проект задеплоится на удаленном репозитории GitHub Pages;
+5. С остальными командами можно ознакомиться в `package.json` (`test`, `format`, `lint` и т.д.);
+6. Настройку `pre-commit hooks` выполнять в файле `.husky/pre-commit` (установлена библиотека `Husky`).
