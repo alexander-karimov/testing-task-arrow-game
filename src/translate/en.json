@@ -1,0 +1,14 @@
+{
+  "5 подряд": "5 in a row",
+  "На каждое нажатие отводится 2 секунды.": "You have 2 seconds for each press.",
+  "Каждое неверное действие или его отсутствие добавляет 1 штрафной бал": "Each incorrect action or lack thereof adds 1 penalty point",
+  "В случае, если вы набираете 3 ошибки за всю игру - вы проиграли.": "If you make 3 mistakes throughout the game, you lose.",
+  "НАЧАТЬ": "START",
+  "ПАУЗА": "PAUSE",
+  "Случайные символы:": "Random symbols:",
+  "Нажмите \"Начать\", чтобы запустить игру, после чего ожидайте первый символ": "Press \"Start\" to start the game, then wait for the first symbol",
+  "Нажатый символ:": "Pressed symbol:",
+  "Текущий счет:": "Current score:",
+  "Правильных ответов:": "Correct answers:",
+  "Штрафные балы:": "Penalty points:"
+}
